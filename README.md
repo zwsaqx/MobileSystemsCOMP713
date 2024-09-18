@@ -20,5 +20,3 @@ Step 3. in the android studios file explorer go to
 app > src > main > res > layout > login_activity.xml
 
 Step 4. run the app by clicking the green triangle at the top of your screen or pressing Shift + F10
-
-Step 5. Profit.
