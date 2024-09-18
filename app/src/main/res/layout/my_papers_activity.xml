@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:layout_margin="15dp"> <!-- padding so buttons don't touch screen edges -->
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:onClick="menuButtonClick"
+        android:radius="20dp"
+        android:text="Back"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Papers"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/rounded_edges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COMP500 - Programming 1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grade Estimate: B+"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimated Accuracy: 60%"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="refreshButtonClick"
+        android:text="Refresh"
+        android:textStyle="bold"
+        android:minWidth="200dp"/>
+
+
+</LinearLayout>

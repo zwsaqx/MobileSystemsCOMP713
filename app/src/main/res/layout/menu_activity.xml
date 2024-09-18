@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:layout_margin="15dp"
+    android:textColor="@color/black"
+
+    > <!-- padding so buttons don't touch screen edges -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:onClick="logoutButtonClick"
+        android:radius="20dp"
+        android:text="Log out"
+        android:textStyle="bold"/>
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grade Estimator App"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:minWidth="100dp"/>
+
+    <Button
+        android:id="@+id/myPapersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="My Papers"
+        android:onClick="myPapersButtonClick"
+        android:radius="20dp"
+        android:layout_marginTop="50dp"
+        android:minWidth="200dp"/>
+
+
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Give Course Feedback"
+        android:onClick="feedbackButtonClick"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:onClick="aboutButtonClick"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:onClick="settingsButtonClick"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>
