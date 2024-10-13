@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_login_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/login_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_settings_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/settings_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/drawable_messages.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/drawable/messages.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/xml_messages_preferences.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/xml/messages_preferences.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_menu_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/menu_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_feedback_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/feedback_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_about_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/about_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/xml_backup_rules.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_my_papers_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/my_papers_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/xml_header_preferences.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/xml/header_preferences.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/drawable_sync.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/drawable/sync.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/drawable_rounded_edges.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/drawable/rounded_edges.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/xml_sync_preferences.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/xml/sync_preferences.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_register_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/register_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/layout_forgot_password_activity.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/layout/forgot_password_activity.xml"
+    },
+    {
+        "merged": "com.example.gradeestimatorapplication.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.gradeestimatorapplication.app-main-62:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]
