@@ -14,7 +14,6 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.example.gradeestimatorapplication.ui.theme.GradeEstimatorApplicationTheme
 import com.example.gradeestimatorapplication.viewmodel.GradeViewModel
-import android.view.View
 import android.widget.Space
 
 
@@ -27,7 +26,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Initialize the ViewModel
+        // start viewModel
         gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
 
         setContent {
@@ -37,11 +36,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
-        // Observe the API response
-        gradeViewModel.gradeResponse.observe(this, Observer { response ->
-            handleApiResponse(response)
-        })
     }
 
     // Function to handle the login button click event
@@ -61,28 +55,13 @@ class MainActivity : ComponentActivity() {
         if (correctCredentials.containsKey(enteredUsername) && correctCredentials[enteredUsername] == enteredPassword) {
             loginResultTextView.text = "Login Successful"
             setContentView(R.layout.menu_activity)
-
-            // Trigger API call to fetch grades
-            gradeViewModel.fetchGrades()  // Step 4: Trigger the API call
-
         } else {
             loginResultTextView.text = "Login Failed"
         }
     }
 
-    // Handle the API response in the UI
-    private fun handleApiResponse(response: List<GradeViewModel.Grade>) {
-        if (response != null) {
-            // Successfully fetched data from the API
-            val resultMessage = "Average Grade: ${response}"    // change response to response.averageGrade
-            Toast.makeText(applicationContext, resultMessage, Toast.LENGTH_LONG).show()
-        } else {
-            // Failed to fetch data
-            Toast.makeText(applicationContext, "Failed to fetch grades", Toast.LENGTH_LONG).show()
-        }
-    }
 
-    // Other button click functions...
+    // page routing
     fun forgotButtonClick(view: View) { setContentView(R.layout.forgot_password_activity) }
     fun myPapersButtonClick(view: View) { setContentView(R.layout.my_papers_activity) }
     fun menuButtonClick(view: View) { setContentView(R.layout.menu_activity) }
@@ -91,12 +70,9 @@ class MainActivity : ComponentActivity() {
     fun termButtonClick(view: View) { setContentView(R.layout.terms_activity) }
     fun privacyButtonClick(view: View) { setContentView(R.layout.privacy_activity) }
     fun languageButtonClick(view: View) { setContentView(R.layout.language_activity) }
+
     fun refreshButtonClick(view: View) {
 
-
-        val df = loadData()
-        val features = df.slice("attendance", "location", "workingtime").toArray()
-        val labels = df.slice("grade").toArray()
 
         val updateMessage = "Refreshed Papers!"
         Toast.makeText(applicationContext, updateMessage, Toast.LENGTH_SHORT).show()

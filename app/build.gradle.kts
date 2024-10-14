@@ -65,6 +65,10 @@ dependencies {
 
 
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.12.0") // optional
+    implementation("org.tensorflow:tensorflow-lite-support:2.12.0")
+
+
 
     //retrofit & gson
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
