@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <Space
-            android:layout_width="498dp"
+            android:layout_width="143dp"
             android:layout_height="52dp"
             android:layout_weight="1" />
 

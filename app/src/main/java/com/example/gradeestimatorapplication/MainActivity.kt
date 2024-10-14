@@ -23,11 +23,21 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var gradeViewModel: GradeViewModel
 
+    private lateinit var gradePredictor: GradePredictor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // start viewModel
         gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
+
+
+        gradePredictor = GradePredictor(this)
+        val location = 80f
+        val workingTime = 70f
+        val attendance = 90f
+        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
+        Toast.makeText(applicationContext,  "Estimated Grade: $predictedGrade", Toast.LENGTH_SHORT).show()
 
         setContent {
             GradeEstimatorApplicationTheme {
@@ -90,5 +100,9 @@ class MainActivity : ComponentActivity() {
     fun aboutButtonClick(view: View) { setContentView(R.layout.about_activity) }
     fun settingsButtonClick(view: View) { setContentView(R.layout.settings_activity) }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        gradePredictor.close()
+    }
 
 }
