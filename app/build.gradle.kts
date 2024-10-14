@@ -61,6 +61,16 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
     implementation("org.tensorflow:tensorflow-lite-support:0.4.0")
 
+    //machine learning smile imports
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+    implementation("org.smile:smile-core:2.5.3")
+    implementation("org.smile:smile-data:2.5.3")
+
+    implementation("com.github.haifengl:smile-core:2.5.3") // Check for the latest version on GitHub
+    implementation("com.github.haifengl:smile-data:2.5.3")
+    implementation("com.github.haifengl:smile-kotlin:2.5.3") // For Kotlin support
+
+
     //retrofit & gson
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")

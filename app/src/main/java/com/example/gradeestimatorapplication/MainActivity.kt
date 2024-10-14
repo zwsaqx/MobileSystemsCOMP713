@@ -12,9 +12,17 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresPermission
 import androidx.lifecycle.Observer
 import com.example.gradeestimatorapplication.ui.theme.GradeEstimatorApplicationTheme
 import com.example.gradeestimatorapplication.viewmodel.GradeViewModel
+import smile.data.DataFrame
+import smile.data.formula.Formula
+import smile.regression.RandomForest
+import smile.io.Read
+
+
+
 
 class MainActivity : ComponentActivity() {
 
@@ -88,10 +96,34 @@ class MainActivity : ComponentActivity() {
     fun privacyButtonClick(view: View) { setContentView(R.layout.privacy_activity) }
     fun languageButtonClick(view: View) { setContentView(R.layout.language_activity) }
     fun refreshButtonClick(view: View) {
+
+        val df = loadData()
+        val features = df.slice("attendance\n", "location", "workingtime").toArray()
+        val labels = df.slice("grade").toArray()
+
+
+
         val updateMessage = "Refreshed Papers!"
         Toast.makeText(applicationContext, updateMessage, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.my_papers_activity)
     }
+
+    fun trainModel(features: Array<DoubleArray>, labels: DoubleArray): RandomForest {
+        return RandomForest.fit(features, labels) // Fit model
+    }
+
+    private fun loadData(): DataFrame {
+        // Load CSV file from assets or raw resource folder
+        val inputStream = assets.open("gradesData.csv")
+        return RequiresPermission.Read.csv(inputStream)
+    }
+
+    fun predictGrade(model: RandomForest, attendance: Double, location: Double, workingTime: Double): Double {
+        val input = doubleArrayOf(attendance, location, workingTime)
+        return model.predict(input) // Predict final grade
+    }
+
+
     fun feedbackButtonClick(view: View) { setContentView(R.layout.feedback_activity) }
     fun feedbackSubmitButtonClick(view: View) {
         val updateMessage = "Feedback Sent!"
