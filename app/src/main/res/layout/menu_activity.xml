@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:textColor="@color/black"
+
+    > <!-- padding so buttons don't touch screen edges -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="logoutButtonClick"
+            android:radius="20dp"
+            android:text="Log out"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="498dp"
+            android:layout_height="52dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+
+            android:id="@+id/languageButton"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="language"
+            android:onClick="languageButtonClick"
+            android:radius="20dp"
+            tools:srcCompat="@drawable/language2" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:minWidth="100dp"
+        android:text="Grade Estimator App"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/myPapersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:minWidth="200dp"
+        android:onClick="myPapersButtonClick"
+        android:radius="20dp"
+        android:text="My Papers"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/feedbackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:onClick="feedbackButtonClick"
+        android:text="Give Course Feedback"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:onClick="aboutButtonClick"
+        android:text="About"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:onClick="settingsButtonClick"
+        android:text="Settings"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:onClick="termButtonClick"
+            android:radius="20dp"
+            android:text="Terms &amp; Conditions"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/backButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right
+    "
+            android:onClick="privacyButtonClick"
+            android:radius="20dp"
+            android:text="Privacy Policy"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
