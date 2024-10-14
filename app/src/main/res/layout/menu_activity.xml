@@ -9,15 +9,39 @@
     android:textColor="@color/black"
 
     > <!-- padding so buttons don't touch screen edges -->
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:onClick="logoutButtonClick"
-        android:radius="20dp"
-        android:text="Log out"
-        android:textStyle="bold"/>
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="logoutButtonClick"
+            android:radius="20dp"
+            android:text="Log out"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/languageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="languageButtonClick"
+            android:radius="20dp"
+            android:text="Log out"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <TextView
         android:textColor="@color/black"
         android:id="@+id/textView"
