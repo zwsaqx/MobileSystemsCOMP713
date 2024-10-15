@@ -32,12 +32,15 @@ class MainActivity : ComponentActivity() {
         gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
 
 
-//        gradePredictor = GradePredictor(this)
-//        val location = 80f
-//        val workingTime = 70f
-//        val attendance = 90f
-//        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
-//        Toast.makeText(applicationContext,  "Estimated Grade: $predictedGrade", Toast.LENGTH_SHORT).show()
+
+        gradePredictor = GradePredictor(this)
+        val location = 80f
+        val workingTime = 70f
+        val attendance = 90f
+
+
+        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
+        Toast.makeText(applicationContext,  "Estimated Grade: $predictedGrade", Toast.LENGTH_SHORT).show()
 
         setContent {
             GradeEstimatorApplicationTheme {
@@ -82,8 +85,6 @@ class MainActivity : ComponentActivity() {
     fun languageButtonClick(view: View) { setContentView(R.layout.language_activity) }
 
     fun refreshButtonClick(view: View) {
-
-
         val updateMessage = "Refreshed Papers!"
         Toast.makeText(applicationContext, updateMessage, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.my_papers_activity)
@@ -102,7 +103,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-       // gradePredictor.close()
+        gradePredictor.close()
     }
 
 }

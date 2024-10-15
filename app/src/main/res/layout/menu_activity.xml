@@ -12,7 +12,7 @@
     > <!-- padding so buttons don't touch screen edges -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="91dp"
         android:orientation="horizontal">
 
 
@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <Space
-            android:layout_width="143dp"
+            android:layout_width="84dp"
             android:layout_height="52dp"
             android:layout_weight="1" />
 
