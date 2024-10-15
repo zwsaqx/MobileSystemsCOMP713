@@ -1,5 +1,6 @@
 package com.example.gradeestimatorapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -32,15 +34,35 @@ class MainActivity : ComponentActivity() {
         gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
 
 
-
         gradePredictor = GradePredictor(this)
         val location = 80f
         val workingTime = 70f
         val attendance = 90f
 
-
         val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
         Toast.makeText(applicationContext,  "Estimated Grade: $predictedGrade", Toast.LENGTH_SHORT).show()
+
+//        attendanceEditText = findViewById<EditText>(R.id.editTextnumber)
+//        workingTimeEditText = findViewById<EditText>(R.id.editTextnumber2)
+//        locationEditText = findViewById<EditText>(R.id.editTextnumber3)
+//        val buttonNext: Button = findViewById<Button>(R.id.buttonNext)
+//
+//        buttonNext.setOnClickListener {
+//            // Get the input values
+//            val attendance = attendanceEditText.text.toString().toFloatOrNull() ?: 0f
+//            val workingTime = workingTimeEditText.text.toString().toFloatOrNull() ?: 0f
+//            val location = locationEditText.text.toString().toFloatOrNull() ?: 0f
+//
+//            // Create an Intent to start the next activity
+//            val intent = Intent(this, GradePredictionActivity::class.java)
+//            // Put the values into the Intent
+//            intent.putExtra("attendance", attendance)
+//            intent.putExtra("workingTime", workingTime)
+//            intent.putExtra("location", location)
+//
+//            // Start the new activity
+//            startActivity(intent)
+//        }
 
         setContent {
             GradeEstimatorApplicationTheme {
@@ -85,7 +107,24 @@ class MainActivity : ComponentActivity() {
     fun languageButtonClick(view: View) { setContentView(R.layout.language_activity) }
 
     fun refreshButtonClick(view: View) {
-        val updateMessage = "Refreshed Papers!"
+        val updateMessage = "Grade predicted!"
+//        attendanceEditText = findViewById(R.id.editTextnumber)
+//        workingTimeEditText = findViewById(R.id.editTextnumber2)
+//        locationEditText = findViewById(R.id.editTextnumber3)
+//        textViewGrade = findViewById(R.id.textView10)
+//        val buttonPredict: Button = findViewById(R.id.buttonPredict)
+//
+//
+//        val attendance = R.id.editTextnumber.text.toString().toFloatOrNull() ?: 0f
+//        val workingTime = workingTimeEditText.text.toString().toFloatOrNull() ?: 0f
+//        val location = locationEditText.text.toString().toFloatOrNull() ?: 0f
+//
+//        // Predict the grade using the model
+//        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
+//
+//        // Update the TextView with the predicted grade
+//        textViewGrade.text = "Grade: $predictedGrade"
+
         Toast.makeText(applicationContext, updateMessage, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.my_papers_activity)
     }

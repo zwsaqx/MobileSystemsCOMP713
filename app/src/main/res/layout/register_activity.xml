@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="*********"
+        android:hint="password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:radius="12dp"
