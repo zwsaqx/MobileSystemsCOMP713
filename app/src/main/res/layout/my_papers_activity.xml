@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
+    android:layout_margin="19dp"
     android:gravity="top|center"
     android:orientation="vertical"> <!-- padding so buttons don't touch screen edges -->
 
@@ -39,7 +39,7 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="412dp"
+            android:layout_height="382dp"
             android:fillViewport="true"
             android:verticalScrollbarPosition="right">
 
@@ -156,11 +156,11 @@
         <EditText
             android:id="@+id/editTextnumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Class attendance 1-100"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:radius="12dp"
             android:layout_marginLeft="20dp"
@@ -170,34 +170,28 @@
         <EditText
             android:id="@+id/editTextnumber2"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:ems="10"
             android:hint="Time spent working 1-100"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:radius="12dp" />
 
         <EditText
             android:id="@+id/editTextnumber3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:ems="10"
             android:hint="Time spent at Uni 1-100"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:radius="12dp" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Grade estimate: " />
 
 
     </LinearLayout>

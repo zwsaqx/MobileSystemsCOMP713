@@ -31,16 +31,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // start viewModel
-        gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
 
 
-        gradePredictor = GradePredictor(this)
-        val location = 80f
-        val workingTime = 70f
-        val attendance = 90f
-
-        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
-        Toast.makeText(applicationContext,  "Estimated Grade: $predictedGrade", Toast.LENGTH_SHORT).show()
 
 //        attendanceEditText = findViewById<EditText>(R.id.editTextnumber)
 //        workingTimeEditText = findViewById<EditText>(R.id.editTextnumber2)
@@ -107,26 +99,29 @@ class MainActivity : ComponentActivity() {
     fun languageButtonClick(view: View) { setContentView(R.layout.language_activity) }
 
     fun refreshButtonClick(view: View) {
-        val updateMessage = "Grade predicted!"
-//        attendanceEditText = findViewById(R.id.editTextnumber)
-//        workingTimeEditText = findViewById(R.id.editTextnumber2)
-//        locationEditText = findViewById(R.id.editTextnumber3)
-//        textViewGrade = findViewById(R.id.textView10)
-//        val buttonPredict: Button = findViewById(R.id.buttonPredict)
-//
-//
-//        val attendance = R.id.editTextnumber.text.toString().toFloatOrNull() ?: 0f
-//        val workingTime = workingTimeEditText.text.toString().toFloatOrNull() ?: 0f
-//        val location = locationEditText.text.toString().toFloatOrNull() ?: 0f
-//
-//        // Predict the grade using the model
-//        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
-//
-//        // Update the TextView with the predicted grade
-//        textViewGrade.text = "Grade: $predictedGrade"
 
+
+        gradeViewModel = ViewModelProvider(this).get(GradeViewModel::class.java)
+
+
+        gradePredictor = GradePredictor(this)
+
+
+        val attendanceEditText = findViewById<EditText>(R.id.editTextnumber)
+        val workingtimeEditText = findViewById<EditText>(R.id.editTextnumber2)
+        val locationEditText = findViewById<EditText>(R.id.editTextnumber3)
+
+        val attendance = attendanceEditText.text.toString().toFloatOrNull() ?: 0f
+        val workingTime = workingtimeEditText.text.toString().toFloatOrNull() ?: 0f
+        val location = locationEditText.text.toString().toFloatOrNull() ?: 0f
+
+        // predicting the grade
+        val predictedGrade = gradePredictor.predict(location, workingTime, attendance)
+
+        val updateMessage = "Grade: $predictedGrade"
         Toast.makeText(applicationContext, updateMessage, Toast.LENGTH_SHORT).show()
         setContentView(R.layout.my_papers_activity)
+        gradePredictor.close()
     }
 
 
